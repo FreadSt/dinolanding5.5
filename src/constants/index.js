@@ -100,13 +100,11 @@ export const MIDDLE_CARDS = [
         img:limiting,
         icon:service,
         title:'Too techy with limited support',
-        delay:200,
     },
     {
         img:costly,
         icon:mailchimp,
         title:'It’s all about the cost at the end of the day...',
-        delay:400,
     },
 ]
 
@@ -128,12 +126,14 @@ export const AnalystContainer = () => {
 
 export const LOWER_ADVANATGES_CARDS = [
     {
+        delay: 200,
         img:emailbuilderImg,
         icon:iconbuilder,
         title:'Email Builder',
         des:"Craft stunning emails with drag-n-drop simplicity, unleashing your creativity and optimizing the design process with ease"
     },
     {
+        delay: 300,
         img:brandImg,
         icon:brandIcon,
         title:'AI Assistant',

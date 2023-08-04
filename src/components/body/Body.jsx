@@ -92,20 +92,12 @@ export const Body = () => {
     const getMiddleCards = () => {
         return MIDDLE_CARDS.map((item,i) => {
             return(
-                <ScrollAnimations
-                    delay={item.delay}
-                    animateIn={"animate__fadeInUp"}
-                    animateOnce={true}
-                    duration={0.9}
-                    offset={10}
-                    style={{height:'100%'}}
-                >
+
                     <div className={'mid-card'}>
                         <img src={item.img} className={'small-img'}/>
                         <img src={item.icon} alt={'mid-icon'}/>
                         <div className={'card-title'}>{item.title}</div>
                     </div>
-                </ScrollAnimations>
             )
         })
     }
@@ -155,7 +147,7 @@ export const Body = () => {
         return LOWER_ADVANATGES_CARDS.map((item,i) => {
             return(
                 <ScrollAnimations
-                    delay={300}
+                    delay={item.delay}
                     animateIn={"animate__fadeInUp"}
                     animateOnce={true}
                     duration={0.9}
@@ -223,7 +215,16 @@ export const Body = () => {
                     </div>
                     <div className={'services'}>
                         <div className={'small-cards'}>
-                            {getMiddleCards()}
+                            <ScrollAnimations
+                                delay={100}
+                                animateIn={"animate__fadeInUp"}
+                                animateOnce={true}
+                                duration={0.9}
+                                offset={10}
+                                style={{height:'100%'}}
+                            >
+                                {getMiddleCards()}
+                            </ScrollAnimations>
                         </div>
                         <ScrollAnimations
                             delay={200}

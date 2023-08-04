@@ -179,37 +179,44 @@
         justify-content: space-between;
         height: 600px;
         gap: 20px;
-        .mid-card{
-          height: 290px;
+        .animated{
           display: flex;
           flex-direction: column;
-          justify-content: flex-end;
-          background: #FAFAFA;
-          border-radius: 40px;
-          position: relative;
-          .small-img{
-            top: 30px;
-            right: 30px;
-            position: absolute;
-            width: 210px;
-            height: 82px;
+          justify-content: space-between;
+          height: 600px;
+          gap: 20px;
+          .mid-card{
+            height: 290px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            background: #FAFAFA;
+            border-radius: 40px;
+            position: relative;
+            .small-img{
+              top: 30px;
+              right: 30px;
+              position: absolute;
+              width: 210px;
+              height: 82px;
+            }
+            img{
+              width: 43px;
+              height: 43px;
+              margin-bottom: 20px;
+            }
+            div{
+              font-family: MacPawFixelBold;
+              color: var(--dino-dark, #2A2B3B);
+              font-feature-settings: 'clig' off, 'liga' off;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+            }
+            padding: 40px;
+            box-sizing: border-box;
           }
-          img{
-            width: 43px;
-            height: 43px;
-            margin-bottom: 20px;
-          }
-          div{
-            font-family: MacPawFixelBold;
-            color: var(--dino-dark, #2A2B3B);
-            font-feature-settings: 'clig' off, 'liga' off;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-          }
-          padding: 40px;
-          box-sizing: border-box;
         }
       }
       .large-card{

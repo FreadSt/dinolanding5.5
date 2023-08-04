@@ -29,7 +29,7 @@ export const Body = () => {
             return(
                 <ScrollAnimations
                     delay={item.delay}
-                    animateIn={"animate__fadeInUp"}
+                    animateIn={"animate__slideInUp"}
                     animateOnce={true}
                     duration={0.9}
                     offset={10}
@@ -178,12 +178,21 @@ export const Body = () => {
                     {getUpperCards()}
                 </div>
                 <div className={'middle-block'}>
-                    <div className={'middle-poster'}>
-                        <h5>Fully equipped for successful campaigns</h5>
-                        <h1>Superior Functionality
-                            at a <b>Fraction of the Cost</b></h1>
-                        <span>The following section contains some of the answers to the survey we've done and IS NOT heading to offend or discredit anybody</span>
-                    </div>
+                    <ScrollAnimations
+                        delay={200}
+                        animateIn={"animate__slideInUp"}
+                        animateOnce={true}
+                        duration={0.9}
+                        offset={10}
+                        style={{height:'100%'}}
+                    >
+                        <div className={'middle-poster'}>
+                            <h5>Fully equipped for successful campaigns</h5>
+                            <h1>Superior Functionality
+                                at a <b>Fraction of the Cost</b></h1>
+                            <span>The following section contains some of the answers to the survey we've done and IS NOT heading to offend or discredit anybody</span>
+                        </div>
+                    </ScrollAnimations>
                     <div className={'tag-container'}>
                         <h1>Essential Email Marketing Features User-Friendly Tailored for Seamless Experience</h1>
                         <div className={'tags'}>

@@ -39,6 +39,7 @@
   .upper-cards{
     display: flex;
     width: 1040px;
+    height: 600px;
     justify-content: space-between;
     margin-top: 20px;
     z-index: 33;
@@ -78,6 +79,9 @@
     width: 100%;
     margin-top: 50px;
     max-width: 1040px;
+    .animate-wrapper{
+      height: 600px;
+    }
     .middle-poster{
       width: 100%;
       position: relative;

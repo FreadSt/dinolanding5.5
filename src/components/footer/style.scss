@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  .poster-wrapper{
+    height: 600px;
+  }
   .footer-poster{
     height: 600px;
     width: 1040px;

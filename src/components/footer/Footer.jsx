@@ -10,6 +10,7 @@ import subscribed from '../../assets/images/CheckSquare.png';
 import ScrollAnimations from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import styled, { keyframes } from 'styled-components';
+import React from "react";
 
 const fadeAnimation = keyframes`${fadeInUpBig}`;
 
@@ -81,27 +82,38 @@ export const Footer = () => {
 
     return(
         <div className={'footer-container'}>
-            <div className={'footer-poster'}>
-                <div className={'text-box'}>
-                    <h5>Join Dinomail's waitlist now
-                        and be at the forefront of innovation!</h5>
-                    <h1>Embrace the Future
-                        of Email Marketing</h1>
-                </div>
-                <form className={'form-wrapper'} ref={form} onSubmit={handleSubmit}>
-                    <input
-                        placeholder={'Enter your email'}
-                        name={"user_email"}
-                        value={testEmail}
-                        onChange={handleChange}
-                        onClick={handleActiveButton}
-                        type={'text'}
-                        className={isError === null  ? "valid-input" : "invalid-input"}
-                    />
-                    <button onClick={sendEmail} disabled={isError || !isFilled}>
-                        <div>Join the waitlist</div>
-                    </button>
-                </form>
+            <div className={'poster-wrapper'}>
+                <ScrollAnimations
+                    delay={200}
+                    animateIn={"animate__slideInUp"}
+                    animateOnce={true}
+                    duration={0.9}
+                    offset={10}
+                    style={{height:'250px'}}
+                >
+                    <div className={'footer-poster'}>
+                        <div className={'text-box'}>
+                            <h5>Join Dinomail's waitlist now
+                                and be at the forefront of innovation!</h5>
+                            <h1>Embrace the Future
+                                of Email Marketing</h1>
+                        </div>
+                        <form className={'form-wrapper'} ref={form} onSubmit={handleSubmit}>
+                            <input
+                                placeholder={'Enter your email'}
+                                name={"user_email"}
+                                value={testEmail}
+                                onChange={handleChange}
+                                onClick={handleActiveButton}
+                                type={'text'}
+                                className={isError === null  ? "valid-input" : "invalid-input"}
+                            />
+                            <button onClick={sendEmail} disabled={isError || !isFilled}>
+                                <div>Join the waitlist</div>
+                            </button>
+                        </form>
+                    </div>
+                </ScrollAnimations>
             </div>
             {
                 isSubmit && !isError && isFilled ?

@@ -105,40 +105,42 @@ export const Body = () => {
     const getUpperAdvantagesCards = () => {
         return(
             <div className={'adv-cards'}>
-                <ScrollAnimations
-                    delay={200}
-                    animateIn={"animate__fadeInUp"}
-                    animateOnce={true}
-                    duration={0.9}
-                    offset={2}
-                    style={{height:'100%'}}
-                >
-                    <div className={'smart-load'}>
-                        <img src={note} className={'note-img'} alt={'noteImg'}/>
-                        <div className={'inner-content'}>
-                            <img src={smartLoad} className={'icon'} alt={'smartLoad-icon'}/>
-                            <h5>Smart Load Balancing</h5>
-                            <p>Unveil valuable insights, optimize performance, and secure the best price – all on your timeline!</p>
+                <div className={'adv-wrapper'}>
+                    <ScrollAnimations
+                        delay={200}
+                        animateIn={"animate__slideInUp"}
+                        animateOnce={true}
+                        duration={0.9}
+                        offset={10}
+                        style={{height:'250px'}}
+                    >
+                        <div className={'smart-load'}>
+                            <img src={note} className={'note-img'} alt={'noteImg'}/>
+                            <div className={'inner-content'}>
+                                <img src={smartLoad} className={'icon'} alt={'smartLoad-icon'}/>
+                                <h5>Smart Load Balancing</h5>
+                                <p>Unveil valuable insights, optimize performance, and secure the best price – all on your timeline!</p>
+                            </div>
                         </div>
-                    </div>
-                </ScrollAnimations>
-                <ScrollAnimations
-                    delay={300}
-                    animateIn={"animate__fadeInUp"}
-                    animateOnce={true}
-                    duration={0.9}
-                    offset={2}
-                    style={{height:'100%'}}
-                >
-                    <div className={'Ai-assistant'}>
-                        <img src={ai} className={'card-img'} alt={'ai-img'}/>
-                        <div className={'inner-content'}>
-                            <img src={aiIcon} className={'icon'} alt={'ai-icon'}/>
-                            <h5>AI Assistant</h5>
-                            <p>Maximize your efficiency with the AI Assistant: write emails, segment your audience, work with stats, or just ask for an advice</p>
+                    </ScrollAnimations>
+                    <ScrollAnimations
+                        delay={300}
+                        animateIn={"animate__slideInUp"}
+                        animateOnce={true}
+                        duration={0.9}
+                        offset={2}
+                        style={{height:'100%'}}
+                    >
+                        <div className={'Ai-assistant'}>
+                            <img src={ai} className={'card-img'} alt={'ai-img'}/>
+                            <div className={'inner-content'}>
+                                <img src={aiIcon} className={'icon'} alt={'ai-icon'}/>
+                                <h5>AI Assistant</h5>
+                                <p>Maximize your efficiency with the AI Assistant: write emails, segment your audience, work with stats, or just ask for an advice</p>
+                            </div>
                         </div>
-                    </div>
-                </ScrollAnimations>
+                    </ScrollAnimations>
+                </div>
             </div>
         )
     }
@@ -146,23 +148,25 @@ export const Body = () => {
     const getLowerAdvantagesCards = () => {
         return LOWER_ADVANATGES_CARDS.map((item,i) => {
             return(
-                <ScrollAnimations
-                    delay={item.delay}
-                    animateIn={"animate__fadeInUp"}
-                    animateOnce={true}
-                    duration={0.9}
-                    offset={2}
-                    style={{height:'100%'}}
-                >
-                    <div className={'adv-card'}>
-                        <img src={item.img} alt={'lowerAdv-card'} className={'lowerAdv-img'}/>
-                        <div className={'inner-content'}>
-                            <img src={item.icon} alt={'lowerAdv-icon'}/>
-                            <h5>{item.title}</h5>
-                            <p>{item.des}</p>
+                <div className={'lower-adv-wrapper'}>
+                    <ScrollAnimations
+                        delay={item.delay}
+                        animateIn={"animate__slideInUp"}
+                        animateOnce={true}
+                        duration={0.9}
+                        offset={2}
+                        style={{height:'250px'}}
+                    >
+                        <div className={'adv-card'}>
+                            <img src={item.img} alt={'lowerAdv-card'} className={'lowerAdv-img'}/>
+                            <div className={'inner-content'}>
+                                <img src={item.icon} alt={'lowerAdv-icon'}/>
+                                <h5>{item.title}</h5>
+                                <p>{item.des}</p>
+                            </div>
                         </div>
-                    </div>
-                </ScrollAnimations>
+                    </ScrollAnimations>
+                </div>
             )
         })
     }
@@ -225,50 +229,87 @@ export const Body = () => {
                         </div>
                     </div>
                     <div className={'services'}>
-                        <div className={'small-cards'}>
+                        <div className={'small-wrapper'}>
                             <ScrollAnimations
-                                delay={100}
-                                animateIn={"animate__fadeInUp"}
+                                delay={200}
+                                animateIn={"animate__slideInUp"}
                                 animateOnce={true}
                                 duration={0.9}
                                 offset={10}
-                                style={{height:'100%'}}
+                                style={{height:'250px'}}
                             >
-                                {getMiddleCards()}
+                                <div className={'small-cards'}>
+                                    {getMiddleCards()}
+                                </div>
                             </ScrollAnimations>
                         </div>
-                        <ScrollAnimations
-                            delay={200}
-                            animateIn={"animate__fadeInUp"}
-                            animateOnce={true}
-                            duration={0.9}
-                            offset={10}
-                            style={{height:'100%'}}
-                        >
-                            <div className={'large-card'}>
-                                <img src={star} className={'large-img'}/>
-                                <img src={dinomail} alt={'mid-dino'}/>
-                                <div>Speedy, affordable and intelligent
-                                    email marketing solution</div>
-                            </div>
-                        </ScrollAnimations>
+                        <div className={'large-wrapper'}>
+                            <ScrollAnimations
+                                delay={300}
+                                animateIn={"animate__slideInUp"}
+                                animateOnce={true}
+                                duration={0.9}
+                                offset={10}
+                                style={{height:'250px'}}
+                            >
+                                <div className={'large-card'}>
+                                    <img src={star} className={'large-img'}/>
+                                    <img src={dinomail} alt={'mid-dino'}/>
+                                    <div>Speedy, affordable and intelligent
+                                        email marketing solution</div>
+                                </div>
+                            </ScrollAnimations>
+                        </div>
                     </div>
                 </div>
                 <div className={'lower-block'}>
-                    <div className={'lower-poster'}>
-                        <h5>Facilitate your workflow with</h5>
-                        <h1><b>The Ultimate</b></h1>
-                        <h1>Email Marketing</h1>
-                        <h1>Toolset</h1>
+                    <div className={'lower-wrapper'}>
+                        <ScrollAnimations
+                            delay={200}
+                            animateIn={"animate__slideInUp"}
+                            animateOnce={true}
+                            duration={0.9}
+                            offset={10}
+                            style={{height:'250px'}}
+                        >
+                            <div className={'lower-poster'}>
+                                <h5>Facilitate your workflow with</h5>
+                                <h1><b>The Ultimate</b></h1>
+                                <h1>Email Marketing</h1>
+                                <h1>Toolset</h1>
+                            </div>
+                        </ScrollAnimations>
                     </div>
                     <div className={'cards'}>
                         {getUpperAdvantagesCards()}
                     </div>
-                    <AnalystContainer/>
+                    <div className={'analyst-wrapper'}>
+                        <ScrollAnimations
+                            delay={200}
+                            animateIn={"animate__slideInUp"}
+                            animateOnce={true}
+                            duration={0.9}
+                            offset={10}
+                            style={{height:'250px'}}
+                        >
+                            <AnalystContainer/>
+                        </ScrollAnimations>
+                    </div>
                     <div className={'lower-cards'}>
                         {getLowerAdvantagesCards()}
                     </div>
-                    <CompanionContainer/>
+                    <div className={'companion-wrapper'}>
+                        <ScrollAnimations
+                            delay={200}
+                            animateIn={"animate__slideInUp"}
+                            animateOnce={true}
+                            duration={0.9}
+                            offset={10}
+                            style={{height:'250px'}}
+                        >
+                            <CompanionContainer/>
+                        </ScrollAnimations>
+                    </div>
                 </div>
         </div>
     )

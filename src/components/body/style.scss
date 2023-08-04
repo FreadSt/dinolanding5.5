@@ -177,12 +177,8 @@
       display: flex;
       gap: 20px;
       text-align: left;
-      .small-cards{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      .small-wrapper{
         height: 600px;
-        gap: 20px;
         .animated{
           display: flex;
           flex-direction: column;
@@ -223,69 +219,83 @@
           }
         }
       }
-      .large-card{
-        background: #FAFAFA;
-        padding: 40px;
-        border-radius: 40px;
-        box-sizing: border-box;
-        width: 670px;
-        height: 600px;
+      .small-cards{
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        position: relative;
-        .large-img{
-          right: 30px;
-          top: 30px;
-          position: absolute;
-          width: 420px;
-          height: 420px;
+        justify-content: space-between;
+        height: 600px;
+        gap: 20px;
+      }
+      .large-wrapper{
+        height: 600px;
+        .large-card{
+          background: #FAFAFA;
+          padding: 40px;
+          border-radius: 40px;
+          box-sizing: border-box;
+          width: 670px;
+          height: 600px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          position: relative;
+          .large-img{
+            right: 30px;
+            top: 30px;
+            position: absolute;
+            width: 420px;
+            height: 420px;
+          }
+          img{
+            width: 170px;
+            height: 63px;
+            margin-bottom: 20px;
+          }
+          div{
+            font-family: MacPawFixelBold;
+            color: #2A2B3B;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
         }
-        img{
-          width: 170px;
-          height: 63px;
-          margin-bottom: 20px;
-        }
-        div{
-          font-family: MacPawFixelBold;
-          color: #2A2B3B;
-          font-size: 24px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-        }
+
       }
     }
   }
   .lower-block{
     margin-top: 50px;
-    .lower-poster{
-      box-sizing: border-box;
-      justify-content: center;
-      background: #FAFAFA;
-      border-radius: 40px;
-      padding: 60px;
+    .lower-wrapper{
       height: 600px;
-      width: 1040px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h5{
-        font-family: MacPawFixelSemiBold;
-        font-size: 32px;
-        line-height: 115%;
-        color: #2A2B3B;
-      }
-      h1{
-        margin: 0;
-        text-align: center;
-        width: 625px;
-        font-family: MacPawFixelSemiBold;
-        font-size: 74px;
-        line-height: 115%;
-        color: #2A2B3B;
-        b{
-          color: #7E9D00;
+      .lower-poster{
+        box-sizing: border-box;
+        justify-content: center;
+        background: #FAFAFA;
+        border-radius: 40px;
+        padding: 60px;
+        height: 600px;
+        width: 1040px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h5{
+          font-family: MacPawFixelSemiBold;
+          font-size: 32px;
+          line-height: 115%;
+          color: #2A2B3B;
+        }
+        h1{
+          margin: 0;
+          text-align: center;
+          width: 625px;
+          font-family: MacPawFixelSemiBold;
+          font-size: 74px;
+          line-height: 115%;
+          color: #2A2B3B;
+          b{
+            color: #7E9D00;
+          }
         }
       }
     }
@@ -297,36 +307,42 @@
         width: 100%;
         justify-content: space-between;
         display: flex;
-        .smart-load, .Ai-assistant{
-          width: 510px;
-          position: relative;
-          height: 100%;
-          background: #EEE;
+        .adv-wrapper{
+          width: 100%;
+          height: 600px;
+          justify-content: space-between;
           display: flex;
-          flex-direction: column;
-          box-sizing: border-box;
-          border-radius: 40px;
-          justify-content: flex-end;
-          .inner-content{
+          .smart-load, .Ai-assistant{
+            width: 510px;
+            position: relative;
+            height: 600px;
+            background: #EEE;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
             box-sizing: border-box;
-            padding: 40px 60px 60px;
-            font-family: MacPawFixelSemiBold;
-            text-align: left;
-            height: 309.07px;
-            h5{
-              margin: 25px 0;
-              font-size: 26px;
-              line-height: 28.6px;
-            }
-            p{
-              margin: 0;
-              opacity: 0.7;
-              font-size: 18px;
-              line-height:  27px;
-              letter-spacing: -0.36px;
+            border-radius: 40px;
+            justify-content: flex-end;
+            .inner-content{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              box-sizing: border-box;
+              padding: 40px 60px 60px;
+              font-family: MacPawFixelSemiBold;
+              text-align: left;
+              height: 309.07px;
+              h5{
+                margin: 25px 0;
+                font-size: 26px;
+                line-height: 28.6px;
+              }
+              p{
+                margin: 0;
+                opacity: 0.7;
+                font-size: 18px;
+                line-height:  27px;
+                letter-spacing: -0.36px;
+              }
             }
           }
         }
@@ -365,6 +381,12 @@
         img{
         }
       }
+    }
+    .analyst-wrapper{
+      height: 600px;
+    }
+    .companion-wrapper{
+      height: 600px;
     }
     .analyst-container, .companion-container{
       display: flex;
@@ -412,6 +434,9 @@
       display: flex;
       margin-top: 20px;
       gap: 20px;
+      .lower-adv-wrapper{
+        height: 600px;
+      }
       .adv-card{
         background: #EEEEEE;
         border-radius: 40px;

@@ -126,8 +126,12 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className={'socials'}>
-                    <img src={twitter} className={'twitter'} alt={'twitter'}/>
-                    <img src={linked} alt={'linked'}/>
+                    <a href={"https://twitter.com/dinomail_io"}>
+                        <img src={twitter} className={'twitter'} alt={'twitter'}/>
+                    </a>
+                    <a href={"https://www.linkedin.com/company/dinomail/about/?viewAsMember=true"}>
+                        <img src={linked} alt={'linked'}/>
+                    </a>
                 </div>
             </div>
         </div>

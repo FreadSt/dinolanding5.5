@@ -16,6 +16,9 @@ import note from "../../assets/images/macAirM2.png";
 import smartLoad from "../../assets/images/icons/loadbalancing.svg";
 import ai from "../../assets/images/AIassistant.jpg"
 import aiIcon from "../../assets/images/icons/Ai.svg";
+import star from "../../assets/images/star.svg";
+import limiting from "../../assets/images/limiting.svg";
+import costly from "../../assets/images/costly.svg";
 import Marquee from "react-fast-marquee";
 import ScrollAnimations from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
@@ -98,6 +101,7 @@ export const Body = () => {
                     style={{height:'100%'}}
                 >
                     <div className={'mid-card'}>
+                        <img src={item.img} className={'small-img'}/>
                         <img src={item.icon} alt={'mid-icon'}/>
                         <div className={'card-title'}>{item.title}</div>
                     </div>
@@ -193,27 +197,25 @@ export const Body = () => {
                         <div className={'tags'}>
                             <Marquee
                                 autoFill={true}
-                                speed={100}
+                                speed={40}
                             >
                                 { getTags()}
                             </Marquee>
                             <Marquee
-                                direction={"right"}
                                 autoFill={true}
-                                speed={80}
+                                speed={45}
                             >
                                 { getTagsSecond()}
                             </Marquee>
                             <Marquee
                                 autoFill={true}
-                                speed={40}
+                                speed={35}
                             >
                                 { getTagsThird()}
                             </Marquee>
                             <Marquee
-                                direction={"right"}
                                 autoFill={true}
-                                speed={70}
+                                speed={38}
                             >
                                 { getTagsFourth()}
                             </Marquee>
@@ -232,6 +234,7 @@ export const Body = () => {
                             style={{height:'100%'}}
                         >
                             <div className={'large-card'}>
+                                <img src={star} className={'large-img'}/>
                                 <img src={dinomail} alt={'mid-dino'}/>
                                 <div>Speedy, affordable and intelligent
                                     email marketing solution</div>

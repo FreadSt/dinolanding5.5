@@ -27,7 +27,7 @@ function App() {
                 body.style.backgroundSize = 'contain';
                 body.style.transition = '.5s';
             } else if (scroll >= bgSize1 && scroll < bgSize2) {
-                body.style.background = '#FFFFFF';
+                body.style.background = '#FAFAFA';
                 body.style.backgroundSize = 'contain';
                 body.style.transition = '.5s';
             } else if (scroll >= bgSize2 && scroll < bgSize3) {
@@ -35,7 +35,7 @@ function App() {
                 body.style.backgroundSize = 'contain';
                 body.style.transition = '.5s';
             } else if (scroll >= bgSize3 && scroll < bgSize4) {
-                body.style.background = '#FFFFFF';
+                body.style.background = '#FAFAFA';
                 body.style.backgroundSize = 'contain';
                 body.style.transition = '.5s';
             } else if (scroll >= bgSize4 && scroll < 10400) {

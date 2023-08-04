@@ -2,6 +2,9 @@ import crypto from "../assets/images/crypto.svg";
 import dogee from "../assets/images/dogee.svg";
 import web3 from "../assets/images/web3.svg";
 import webicon from "../assets/images/web3icon.svg";
+
+import limiting from "../assets/images/limiting.svg";
+import costly from "../assets/images/costly.svg";
 import service from "../assets/images/icons/service.svg";
 import mailchimp from "../assets/images/icons/mailchimp.svg";
 
@@ -14,7 +17,7 @@ import iconbuilder from "../assets/images/icons/builderemail.svg";
 import brandImg from "../assets/images/brand.jpg";
 import brandIcon from "../assets/images/icons/brandbook.svg";
 
-import mobCompanion from "../assets/images/companion.jpg";
+import mobCompanion from "../assets/images/phone.svg";
 import companionIcon from "../assets/images/icons/companion.svg";
 
 import plain from "../assets/images/icons/Plain 3.svg"
@@ -94,11 +97,13 @@ export const TAGS_FOURTH = [
 
 export const MIDDLE_CARDS = [
     {
+        img:limiting,
         icon:service,
         title:'Too techy with limited support',
         delay:200,
     },
     {
+        img:costly,
         icon:mailchimp,
         title:'It’s all about the cost at the end of the day...',
         delay:400,

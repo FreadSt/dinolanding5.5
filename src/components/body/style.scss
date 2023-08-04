@@ -14,6 +14,9 @@
     .poster{
       z-index: 33;
       height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 60px;
       border-radius: 40px;
       background: #FAFAFA;
@@ -21,10 +24,12 @@
       box-sizing: border-box;
       p{
         font-size: 32px;
+        margin-bottom: 40px;
       }
       h1{
         margin-top: 0;
         font-size: 74px;
+        line-height: 115%;
         b{
           color: #D36700;
         }
@@ -96,6 +101,7 @@
       h1{
         font-size: 74px;
         max-width: 850px;
+        line-height: 115%;
         b{
           color: #666DA5;
         }
@@ -125,6 +131,7 @@
         font-family: MacPawFixelSemiBold;
         width: 590px;
         line-height: 115%;
+        margin-bottom: 90.9px;
         margin-top: 0;
       }
       .tags{
@@ -179,6 +186,14 @@
           justify-content: flex-end;
           background: #FAFAFA;
           border-radius: 40px;
+          position: relative;
+          .small-img{
+            top: 30px;
+            right: 30px;
+            position: absolute;
+            width: 210px;
+            height: 82px;
+          }
           img{
             width: 43px;
             height: 43px;
@@ -202,11 +217,19 @@
         padding: 40px;
         border-radius: 40px;
         box-sizing: border-box;
-        width: 100%;
+        width: 670px;
         height: 600px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        position: relative;
+        .large-img{
+          right: 30px;
+          top: 30px;
+          position: absolute;
+          width: 420px;
+          height: 420px;
+        }
         img{
           width: 170px;
           height: 63px;
@@ -270,6 +293,7 @@
           background: #EEE;
           display: flex;
           flex-direction: column;
+          box-sizing: border-box;
           border-radius: 40px;
           justify-content: flex-end;
           .inner-content{
@@ -280,16 +304,17 @@
             padding: 40px 60px 60px;
             font-family: MacPawFixelSemiBold;
             text-align: left;
+            height: 309.07px;
             h5{
               margin: 25px 0;
               font-size: 26px;
-              line-height: 120%;
+              line-height: 28.6px;
             }
             p{
               margin: 0;
               opacity: 0.7;
               font-size: 18px;
-              line-height: 150%; /* 27px */
+              line-height:  27px;
               letter-spacing: -0.36px;
             }
           }
@@ -304,7 +329,7 @@
         }
         .card-img{
           width: 100%;
-          height: 291px;
+          height: 100%;
           border-radius: 40px 40px 0px 0px;
         }
         .icon{
@@ -317,14 +342,23 @@
       display: flex;
       flex-direction: row-reverse;
       img{
-        width: 510px;
+        width: 512px;
         height: 100%;
+        margin-left: -1px;
         border-radius: 40px 0px 0px 40px;
+      }
+    }
+    .companion-container{
+      .content-box{
+        margin-top: 2px;
+        img{
+        }
       }
     }
     .analyst-container, .companion-container{
       display: flex;
       margin-top: 20px;
+      height: 600px;
       width: 1040px;
       border-radius: 40px;
       background: #EEEEEE;
@@ -384,6 +418,7 @@
           padding: 30px 60px 60px;
           font-family: MacPawFixelSemiBold;
           text-align: left;
+          height: 309.07px;
           img{
             width: 64px;
             height: 64px;

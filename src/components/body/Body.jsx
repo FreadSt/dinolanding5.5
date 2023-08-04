@@ -33,7 +33,7 @@ export const Body = () => {
                     animateOnce={true}
                     duration={0.9}
                     offset={10}
-                    style={{height:'150px'}}
+                    style={{height:'250px'}}
                 >
                     <div
                         key={i}
@@ -185,7 +185,7 @@ export const Body = () => {
                             animateOnce={true}
                             duration={0.9}
                             offset={10}
-                            style={{height:'100px'}}
+                            style={{height:'200px'}}
                         >
                             <div className={'middle-poster'}>
                                 <h5>Fully equipped for successful campaigns</h5>

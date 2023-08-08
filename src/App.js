@@ -57,7 +57,7 @@ function App() {
     useEffect(() => {
         window.addEventListener('load', addClass);
         return () => window.removeEventListener('load', addClass);
-    },[])
+    },[showLoader, addClass])
   return (
     <div className="App">
         <Header/>

@@ -36,6 +36,7 @@ export const Body = () => {
                     animateOnce={true}
                     duration={0.9}
                     style={!isMobile ? {height:'250px'} : null}
+                    offset={50}
                 >
                     <div
                         key={i}

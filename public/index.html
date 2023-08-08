@@ -8,6 +8,21 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo512.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Dinomail</title>
+    <script>
+      document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+          document.querySelector(
+                  "body").style.visibility = "hidden";
+          document.querySelector(
+                  ".holder").style.visibility = "visible";
+        } else {
+          document.querySelector(
+                  ".holder").style.display = "none";
+          document.querySelector(
+                  "body").style.visibility = "visible";
+        }
+      };
+    </script>
     <style>
       .holder {
         position: fixed;

@@ -14,6 +14,12 @@ html{
   overflow-x: hidden;
   overflow-y: auto
 }
+@media(max-width: 430px) {
+  body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

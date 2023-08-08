@@ -27,6 +27,8 @@ export const Footer = () => {
     const [isValidEmail, setIsValidEmail] = useState(false)
     const [isActiveButton, setIsActiveButton] = useState(false)
 
+    const isMobile = window.matchMedia("(max-width: 430px)").matches
+
     function validEmail(testEmail) {
         return /\S+@\S+\.\S+/.test(testEmail);
     }
@@ -89,7 +91,7 @@ export const Footer = () => {
                     animateOnce={true}
                     duration={0.9}
                     offset={10}
-                    style={{height:'250px'}}
+                    style={!isMobile ? {height:'250px'} : null}
                 >
                     <div className={'footer-poster'}>
                         <div className={'text-box'}>

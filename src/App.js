@@ -9,10 +9,10 @@ function App() {
     const isMobile = window.matchMedia("(max-width: 430px)").matches
     console.log(isMobile, "mobile")
 
-    const bgSize1 = isMobile ? 1500 : 950
-    const bgSize2 = isMobile ? 3100 : 2290
-    const bgSize3 = isMobile ? 4300 : 3800
-    const bgSize4 = isMobile ? 5900 : 7000
+    const bgSize1 = isMobile ? 600 : 950
+    const bgSize2 = isMobile ? 2100 : 2290
+    const bgSize3 = isMobile ? 4100 : 3800
+    const bgSize4 = isMobile ? 6900 : 7000
 
     var body = document.getElementsByTagName('html')[0];
     body.style.background = "#7E9D00";

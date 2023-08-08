@@ -9,6 +9,7 @@ import service from "../assets/images/icons/service.svg";
 import mailchimp from "../assets/images/icons/mailchimp.svg";
 
 import analyst from "../assets/images/analystNote.jpg";
+import analystMob from "../assets/images/analystNoteMob.jpg";
 import campaignAnalyst from "../assets/images/icons/analyst.svg";
 
 import emailbuilderImg from "../assets/images/builder.jpg";
@@ -18,6 +19,7 @@ import brandImg from "../assets/images/brand.jpg";
 import brandIcon from "../assets/images/icons/brandbook.svg";
 
 import mobCompanion from "../assets/images/phone.svg";
+import phoneImg from "../assets/images/mobCompanion.jpg";
 import companionIcon from "../assets/images/icons/companion.svg";
 
 import plain from "../assets/images/icons/Plain 3.svg"
@@ -44,6 +46,7 @@ import smartphone from "../assets/images/icons/Smartphone Update.svg";
 import signpost from "../assets/images/icons/Signpost.svg";
 
 
+const isMobile = window.matchMedia("(max-width: 430px)").matches
 
 export const UPPER_CARDS = [
     {
@@ -119,7 +122,7 @@ export const AnalystContainer = () => {
                         and make informed decisions with comprehensive dashboards</p>
                 </div>
             </div>
-            <img src={analyst} alt={'analyst-note'} className={'analystImg'}/>
+            <img src={isMobile ? analystMob : analyst} alt={'analyst-note'} className={'analystImg'}/>
         </div>
     )
 }
@@ -136,8 +139,8 @@ export const LOWER_ADVANATGES_CARDS = [
         delay: 300,
         img:brandImg,
         icon:brandIcon,
-        title:'AI Assistant',
-        des:"Maximize your efficiency with the AI Assistant: write emails, segment your audience, work with stats, or just ask for an advice"
+        title:'Brand book',
+        des:"Streamline email building with ease and efficiency. Create style guides, ensure on-brand emails, and reflect your identity effortlessly"
     },
 ]
 
@@ -152,7 +155,7 @@ export const CompanionContainer = () => {
                         Enjoy essential features for seamless campaign management anytime, anywhere.</p>
                 </div>
             </div>
-            <img src={mobCompanion} alt={'companion-mobile'}/>
+            <img src={isMobile ? phoneImg : mobCompanion} alt={'companion-mobile'}/>
         </div>
     )
 }

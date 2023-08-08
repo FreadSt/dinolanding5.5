@@ -30,13 +30,19 @@
           margin-left: 2px;
         }
       }
+      .mobile-flag{
+        display: none;
+      }
       .vl{
         margin: 0 20px;
         border-left: 2px solid #fff;
         height: 40px;
       }
     }
-    button{
+    .btn-hidden{
+      display: none;
+    }
+    .btn{
       background: transparent;
       border: 1px solid #FAFAFA;
       border-radius: 40px;
@@ -73,6 +79,7 @@
         color: #FAFAFA;
         font-size: 32px;
       }
+
       h1{
         margin-top: 0;
         max-width: 555px;
@@ -82,10 +89,266 @@
         line-height: 110%;
       }
     }
+    .btn-hidden{
+      display: none;
+    }
+  }
+  .modal-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 222;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.70);
+    .popuptest{
+      background: red;
+      width: 294px;
+      height: 50px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      padding: 10px 30px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background: #fafafa;
+      span{
+        font-size: 14px;
+        font-family: MacPawFixelMedium;
+        margin-left: 10px;
+      }
+    }
+    .modal-window{
+      background: #EEE;
+      box-sizing: border-box;
+      border-radius: 40px;
+      padding: 50px 0;
+      width: 510px;
+      transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: MacPawFixelSemiBold;
+      position: relative;
+      .close-icon{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+      }
+      h5{
+        margin-top: 0;
+        margin-bottom: 30px;
+        width: 308px;
+        color: #2A2B3B;
+        font-size: 20px;
+        line-height: 115%; /* 23px */
+      }
+      h2{
+        margin-top: 0;
+        color: #2A2B3B;
+        width: 300px;
+        font-size: 32px;
+        line-height: 115%;
+      }
+      .form-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input{
+          width: 270px;
+          padding: 10px 30px;
+          box-sizing: border-box;
+          border-radius: 40px 0px 0px 40px;
+          height: 49px;
+          border: none;
+          font-family: MacPawFixelSemiBold;
+          outline: none;
+          font-size: 14px;
+        }
+        input::placeholder{
+          opacity: 0.30000001192092896;
+        }
+        .invalid-input[type='text']{
+          color: red;
+        }
+        .valid-input[type='text']{
+          color: #2A2B3B;
+        }
+        button{
+          font-family: MacPawFixelSemiBold;
+          border-radius: 0px 40px 40px 0px;
+          background: #7E9D00;
+          padding: 15px 30px;
+          box-sizing: border-box;
+          border: none;
+          font-size: 14px;
+          cursor: pointer;
+          div{
+            color: #fafafa;
+          }
+        }
+      }
+    }
+  }
+  .modal-container-hidden{
+    display: none;
   }
   .header-mac {
     margin-top: -1%;
     width: 1174px;
     overflow: hidden;
+  }
+}
+
+/* modal styles*/
+#modal-root {
+  position: fixed;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  left : 0;
+  top: 0;
+  width: 0px;
+  height : 0px;
+  opacity: 0;
+  transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
+}
+#modal-root.visible {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  top: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: opacity 0.15s ease-out;
+  z-index: 22;
+}
+.modal {
+  z-index: 22;
+  margin: 0 auto;
+  width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media(max-width: 430px) {
+  .header-container{
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    header{
+      margin-top: 20px;
+      padding: 0;
+      width: 100%;
+      align-self: flex-start;
+      .logo-box{
+        position: relative;
+        width: 258px;
+        span{
+          text-align: left;
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 14px;
+          line-height: 120%;
+          font-family:MacPawFixelRegular;
+          .desktop{
+            display: none;
+          }
+        }
+        .mobile-flag{
+          position: absolute;
+          display: flex;
+          align-self: flex-end;
+          width: 18px;
+          height: 10px;
+          right: 20%;
+          bottom: 17%;
+        }
+      }
+    }
+    .header-body{
+      flex-direction: column;
+      align-items: center;
+      .body-text{
+        align-self: flex-start;
+        h3{
+          font-size: 20px;
+        }
+        h1{
+          font-size: 40px;
+          max-width: 315px;
+          width: 100%;
+        }
+      }
+      button{
+        font-family: MacPawFixelSemiBold;
+        border-radius: 40px;
+        background: #7E9D00;
+        padding: 15px 30px;
+        box-sizing: border-box;
+        font-size: 14px;
+        cursor: pointer;
+        border: 1px solid var(--white, #FAFAFA);
+        margin-bottom: 40px;
+        width: 100%;
+        div{
+          margin-top: 2%;
+          color: #fafafa;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+      img{
+        width: 266px;
+        height: 266px;
+      }
+    }
+    .header-mac{
+      margin-top: -40px;
+      width: 365px;
+      height: 229px;
+    }
+    .modal-container{
+      .modal-window{
+        padding: 50px 20px 50px;
+        max-width: 343px;
+        .close-icon{
+          top: 20px;
+          right: 20px;
+        }
+        h5{
+          margin-top: 20px;
+          font-size: 16px;
+          width: 248px;
+        }
+        h2{
+          font-size: 32px;
+        }
+        .form-wrapper{
+          width: 100%;
+          flex-direction: column;
+          button, input{
+            width: 100%;
+            border-radius: 40px;
+          }
+          button{
+            margin-top: 20px;
+          }
+        }
+      }
+    }
   }
 }

@@ -17,8 +17,8 @@ const FadeDiv = styled.div`
 
 export const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const [email, setEmail] = useState({value:"", error:""})
     const [isError, setError] = useState(null)
+    const [email, setEmail] = useState('');
     const [testEmail, setTestEmail] = useState('')
     const [isSubmit, setIsSubmit] = useState(false)
     const [isFilled, setIsFilled] = useState(false)
@@ -32,53 +32,36 @@ export const Header = () => {
     }
 
     const handleChange = event => {
-        if (!validEmail(event.target.value)) {
-            setError('Email is invalid');
+        setEmail(event.target.value);
+    };
+    const handleSubmit = event => {
+        event.preventDefault();
+        setError(null);
+        if (validEmail(email)) {
+            console.log('The email is valid');
+            emailjs.sendForm(
+                "service_kkivfyh",
+                "template_5w5jbvj",
+                form.current,
+                "Du4ndx5_uUnR-dcNy"
+            )
+                .then(
+                    (result) => {
+                        console.log(result.text);
+                    },
+                    (error) => {
+                        console.log(error.text);
+                    }
+                );
+            setIsSubmit(true)
         } else {
-            setError(null);
+            setError('Email is invalid');
         }
-        setTestEmail(event.target.value);
-        setIsFilled(true)
     };
     const handleActiveButton = () => {
         setIsActiveButton(true)
     }
-    const sendEmail = (e) => {
-        e.preventDefault();
-        emailjs.sendForm(
-            "service_kkivfyh",
-            "template_5w5jbvj",
-            form.current,
-            "Du4ndx5_uUnR-dcNy"
-        )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
-        setIsSubmit(true)
-    };
     const form = useRef()
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        let isError = false
-        if(!/\S+@\S+\.\S+/.test(email.value)){
-            setIsValidEmail(true)
-            setEmail((current) => ({value: current.value, error: "Correct mistakes and try again"}) )
-        }
-        if(!email.value){
-            setEmail({value:"", error: "Correct mistakes and try again"})
-            isError = true;
-            setIsValidEmail(false)
-        }
-        if(!isError){
-            setEmail({value:"", error:""})
-            setIsValidEmail(true)
-        }
-    }
     const handleToggle = () => {
         setIsOpen((isOpen) => !isOpen)
         {/*window.scrollTo(0,document.body.scrollHeight); scroll to bottom anchor
@@ -158,13 +141,13 @@ export const Header = () => {
                                 <input
                                     placeholder={'Enter your email'}
                                     name={"user_email"}
-                                    value={testEmail}
+                                    value={email}
                                     onChange={handleChange}
                                     onClick={handleActiveButton}
                                     type={'text'}
-                                    className={isError === null  ? "valid-input" : "invalid-input"}
+                                    className={isError !== null ? "invalid-input" : "valid-input"}
                                 />
-                                <button onClick={sendEmail} disabled={isError || !isFilled}>
+                                <button type={'submit'}>
                                     <div>Join the waitlist</div>
                                 </button>
                             </form>

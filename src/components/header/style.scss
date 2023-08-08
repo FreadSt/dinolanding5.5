@@ -352,3 +352,12 @@
     }
   }
 }
+
+@media(min-height: 1100px) {
+  .header-container{
+    height: 90vh;
+    .header-body{
+      margin-top: 7%;
+    }
+  }
+}

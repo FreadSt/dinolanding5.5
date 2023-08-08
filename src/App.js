@@ -49,6 +49,15 @@ function App() {
             window.removeEventListener('scroll', onScroll)
         }
     }, [])
+    const loader = document.querySelector(".holder");
+    console.log(loader, 'pre Loader')
+    const showLoader = () => loader.classList.remove("holder");
+    const addClass = () => loader.classList.add("holder-hide");
+
+    useEffect(() => {
+        window.addEventListener('load', addClass);
+        return () => window.removeEventListener('load', addClass);
+    },[])
   return (
     <div className="App">
         <Header/>

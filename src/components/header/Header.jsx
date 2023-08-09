@@ -153,7 +153,7 @@ export const Header = () => {
                             </form>
                         </div>
                         {
-                            isSubmit && !isError && isFilled ?
+                            isSubmit ?
                                 <FadeDiv>
                                     <div className={'popuptest'}>
                                         <img src={subscribed} alt={"subscribed"}/>
